@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="35" tilewidth="16" tileheight="16" nextobjectid="240">
+ <tileset firstgid="1" name="Floor" tilewidth="16" tileheight="16" tilecount="819" columns="21">
+  <image source="Objects/Floor.png" width="336" height="624"/>
+ </tileset>
+ <tileset firstgid="820" name="Wall" tilewidth="16" tileheight="16" tilecount="1020" columns="20">
+  <image source="Objects/Wall.png" width="320" height="816"/>
+ </tileset>
+ <tileset firstgid="1840" name="Tile" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+  <image source="Objects/Tile.png" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="1872" name="Pit0" tilewidth="16" tileheight="16" tilecount="256" columns="8">
+  <image source="Objects/Pit0.png" width="128" height="512"/>
+ </tileset>
+ <tileset firstgid="2128" name="Pit1" tilewidth="16" tileheight="16" tilecount="256" columns="8">
+  <image source="Objects/Pit1.png" width="128" height="512"/>
+ </tileset>
+ <tileset firstgid="2384" name="Decor0" tilewidth="16" tileheight="16" tilecount="176" columns="8">
+  <image source="Objects/Decor0.png" width="128" height="352"/>
+ </tileset>
+ <tileset firstgid="2560" name="Decor1" tilewidth="16" tileheight="16" tilecount="176" columns="8">
+  <image source="Objects/Decor1.png" width="128" height="352"/>
+ </tileset>
+ <tileset firstgid="2736" name="Door0" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Objects/Door0.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="2784" name="Door1" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Objects/Door1.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="2832" name="Effect0" tilewidth="16" tileheight="16" tilecount="208" columns="8">
+  <image source="Objects/Effect0.png" width="128" height="416"/>
+ </tileset>
+ <tileset firstgid="3040" name="Effect1" tilewidth="16" tileheight="16" tilecount="208" columns="8">
+  <image source="Objects/Effect1.png" width="128" height="416"/>
+ </tileset>
+ <tileset firstgid="3248" name="Fence" tilewidth="16" tileheight="16" tilecount="96" columns="8">
+  <image source="Objects/Fence.png" width="128" height="192"/>
+ </tileset>
+ <tileset firstgid="3344" name="Ground0" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Objects/Ground0.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="3400" name="Ground1" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Objects/Ground1.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="3456" name="Hill0" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+  <image source="Objects/Hill0.png" width="256" height="288"/>
+ </tileset>
+ <tileset firstgid="3744" name="Hill1" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+  <image source="Objects/Hill1.png" width="256" height="288"/>
+ </tileset>
+ <tileset firstgid="4032" name="Map0" tilewidth="16" tileheight="16" tilecount="180" columns="12">
+  <image source="Objects/Map0.png" width="192" height="240"/>
+ </tileset>
+ <tileset firstgid="4212" name="Ore0" tilewidth="16" tileheight="16" tilecount="63" columns="9">
+  <image source="Objects/Ore0.png" width="144" height="112"/>
+ </tileset>
+ <tileset firstgid="4275" name="Ore1" tilewidth="16" tileheight="16" tilecount="63" columns="9">
+  <image source="Objects/Ore1.png" width="144" height="112"/>
+ </tileset>
+ <tileset firstgid="4338" name="Trap0" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Objects/Trap0.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="4378" name="Trap1" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Objects/Trap1.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="4418" name="Tree0" tilewidth="16" tileheight="16" tilecount="432" columns="12">
+  <image source="Objects/Tree0.png" width="192" height="576"/>
+ </tileset>
+ <tileset firstgid="4850" name="Tree1" tilewidth="16" tileheight="16" tilecount="432" columns="12">
+  <image source="Objects/Tree1.png" width="192" height="576"/>
+ </tileset>
+ <tileset firstgid="5282" name="Ammo" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Items/Ammo.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="5330" name="Amulet" tilewidth="16" tileheight="16" tilecount="24" columns="8">
+  <image source="Items/Amulet.png" width="128" height="48"/>
+ </tileset>
+ <tileset firstgid="5354" name="Armor" tilewidth="16" tileheight="16" tilecount="72" columns="8">
+  <image source="Items/Armor.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="5426" name="Book" tilewidth="16" tileheight="16" tilecount="72" columns="8">
+  <image source="Items/Book.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="5498" name="Boot" tilewidth="16" tileheight="16" tilecount="16" columns="8">
+  <image source="Items/Boot.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="5514" name="Chest0" tilewidth="16" tileheight="16" tilecount="24" columns="8">
+  <image source="Items/Chest0.png" width="128" height="48"/>
+ </tileset>
+ <tileset firstgid="5538" name="Chest1" tilewidth="16" tileheight="16" tilecount="24" columns="8">
+  <image source="Items/Chest1.png" width="128" height="48"/>
+ </tileset>
+ <tileset firstgid="5562" name="Flesh" tilewidth="16" tileheight="16" tilecount="72" columns="8">
+  <image source="Items/Flesh.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="5634" name="Food" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Items/Food.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="5682" name="Glove" tilewidth="16" tileheight="16" tilecount="8" columns="8">
+  <image source="Items/Glove.png" width="128" height="16"/>
+ </tileset>
+ <tileset firstgid="5690" name="Hat" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+  <image source="Items/Hat.png" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="5722" name="Key" tilewidth="16" tileheight="16" tilecount="8" columns="8">
+  <image source="Items/Key.png" width="128" height="16"/>
+ </tileset>
+ <tileset firstgid="5730" name="Light" tilewidth="16" tileheight="16" tilecount="8" columns="8">
+  <image source="Items/Light.png" width="128" height="16"/>
+ </tileset>
+ <tileset firstgid="5738" name="LongWep" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Items/LongWep.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="5794" name="MedWep" tilewidth="16" tileheight="16" tilecount="16" columns="8">
+  <image source="Items/MedWep.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="5810" name="Money" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="Items/Money.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="5874" name="Music" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Items/Music.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="5922" name="Potion" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Items/Potion.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="5962" name="Ring" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Items/Ring.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="6010" name="Rock" tilewidth="16" tileheight="16" tilecount="16" columns="8">
+  <image source="Items/Rock.png" width="128" height="32"/>
+ </tileset>
+ <tileset firstgid="6026" name="Scroll" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Items/Scroll.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="6074" name="Shield" tilewidth="16" tileheight="16" tilecount="8" columns="8">
+  <image source="Items/Shield.png" width="128" height="16"/>
+ </tileset>
+ <tileset firstgid="6082" name="ShortWep" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Items/ShortWep.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="6122" name="Tool" tilewidth="16" tileheight="16" tilecount="24" columns="8">
+  <image source="Items/Tool.png" width="128" height="48"/>
+ </tileset>
+ <tileset firstgid="6146" name="Wand" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Items/Wand.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="6202" name="Aquatic0" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Characters/Aquatic0.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="6250" name="Aquatic1" tilewidth="16" tileheight="16" tilecount="48" columns="8">
+  <image source="Characters/Aquatic1.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="6298" name="Avian0" tilewidth="16" tileheight="16" tilecount="104" columns="8">
+  <image source="Characters/Avian0.png" width="128" height="208"/>
+ </tileset>
+ <tileset firstgid="6402" name="Avian1" tilewidth="16" tileheight="16" tilecount="104" columns="8">
+  <image source="Characters/Avian1.png" width="128" height="208"/>
+ </tileset>
+ <tileset firstgid="6506" name="Cat0" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Characters/Cat0.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="6546" name="Cat1" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Characters/Cat1.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="6586" name="Demon0" tilewidth="16" tileheight="16" tilecount="72" columns="8">
+  <image source="Characters/Demon0.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="6658" name="Demon1" tilewidth="16" tileheight="16" tilecount="72" columns="8">
+  <image source="Characters/Demon1.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="6730" name="Dog0" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Characters/Dog0.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="6786" name="Dog1" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Characters/Dog1.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="6842" name="Elemental0" tilewidth="16" tileheight="16" tilecount="88" columns="8">
+  <image source="Characters/Elemental0.png" width="128" height="176"/>
+ </tileset>
+ <tileset firstgid="6930" name="Elemental1" tilewidth="16" tileheight="16" tilecount="88" columns="8">
+  <image source="Characters/Elemental1.png" width="128" height="176"/>
+ </tileset>
+ <tileset firstgid="7018" name="Humanoid0" tilewidth="16" tileheight="16" tilecount="216" columns="8">
+  <image source="Characters/Humanoid0.png" width="128" height="432"/>
+ </tileset>
+ <tileset firstgid="7234" name="Humanoid1" tilewidth="16" tileheight="16" tilecount="216" columns="8">
+  <image source="Characters/Humanoid1.png" width="128" height="432"/>
+ </tileset>
+ <tileset firstgid="7450" name="Misc0" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="Characters/Misc0.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="7514" name="Misc1" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="Characters/Misc1.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="7578" name="Pest0" tilewidth="16" tileheight="16" tilecount="88" columns="8">
+  <image source="Characters/Pest0.png" width="128" height="176"/>
+ </tileset>
+ <tileset firstgid="7666" name="Pest1" tilewidth="16" tileheight="16" tilecount="88" columns="8">
+  <image source="Characters/Pest1.png" width="128" height="176"/>
+ </tileset>
+ <tileset firstgid="7754" name="Plant0" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="Characters/Plant0.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="7818" name="Plant1" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="Characters/Plant1.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="7882" name="Player0" tilewidth="16" tileheight="16" tilecount="120" columns="8">
+  <image source="Characters/Player0.png" width="128" height="240"/>
+ </tileset>
+ <tileset firstgid="8002" name="Player1" tilewidth="16" tileheight="16" tilecount="120" columns="8">
+  <image source="Characters/Player1.png" width="128" height="240"/>
+ </tileset>
+ <tileset firstgid="8122" name="Quadraped0" tilewidth="16" tileheight="16" tilecount="96" columns="8">
+  <image source="Characters/Quadraped0.png" width="128" height="192"/>
+ </tileset>
+ <tileset firstgid="8218" name="Quadraped1" tilewidth="16" tileheight="16" tilecount="96" columns="8">
+  <image source="Characters/Quadraped1.png" width="128" height="192"/>
+ </tileset>
+ <tileset firstgid="8314" name="Reptile0" tilewidth="16" tileheight="16" tilecount="120" columns="8">
+  <image source="Characters/Reptile0.png" width="128" height="248"/>
+ </tileset>
+ <tileset firstgid="8434" name="Reptile1" tilewidth="16" tileheight="16" tilecount="120" columns="8">
+  <image source="Characters/Reptile1.png" width="128" height="248"/>
+ </tileset>
+ <tileset firstgid="8554" name="Rodent0" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+  <image source="Characters/Rodent0.png" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="8586" name="Rodent1" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+  <image source="Characters/Rodent1.png" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="8618" name="Slime0" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Characters/Slime0.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="8658" name="Slime1" tilewidth="16" tileheight="16" tilecount="40" columns="8">
+  <image source="Characters/Slime1.png" width="128" height="80"/>
+ </tileset>
+ <tileset firstgid="8698" name="Undead0" tilewidth="16" tileheight="16" tilecount="80" columns="8">
+  <image source="Characters/Undead0.png" width="128" height="160"/>
+ </tileset>
+ <tileset firstgid="8778" name="Undead1" tilewidth="16" tileheight="16" tilecount="80" columns="8">
+  <image source="Characters/Undead1.png" width="128" height="160"/>
+ </tileset>
+ <layer name="Floor" width="40" height="35">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Background" width="40" height="35">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Objects" width="40" height="35">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="ObjectLayer"/>
+ <layer name="Foreground" width="40" height="35">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

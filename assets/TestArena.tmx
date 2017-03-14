@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="33" tilewidth="16" tileheight="16" nextobjectid="243">
+ <tileset firstgid="1" name="Wall" tilewidth="16" tileheight="16" tilecount="1020" columns="20">
+  <image source="Objects/Wall.png" width="320" height="816"/>
+  <tile id="15">
+   <objectgroup draworder="index"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="1021" name="Floor" tilewidth="16" tileheight="16" tilecount="819" columns="21">
+  <image source="Objects/Floor.png" width="336" height="624"/>
+ </tileset>
+ <tileset firstgid="1840" name="Pit0" tilewidth="16" tileheight="16" tilecount="256" columns="8">
+  <image source="Objects/Pit0.png" width="128" height="512"/>
+ </tileset>
+ <tileset firstgid="2096" name="Decor0" tilewidth="16" tileheight="16" tilecount="176" columns="8">
+  <image source="Objects/Decor0.png" width="128" height="352"/>
+ </tileset>
+ <tileset firstgid="2272" name="Ground0" tilewidth="16" tileheight="16" tilecount="56" columns="8">
+  <image source="Objects/Ground0.png" width="128" height="112"/>
+ </tileset>
+ <tileset firstgid="2328" name="Player0" tilewidth="16" tileheight="16" tilecount="160" columns="16">
+  <image source="Characters/Player.png" width="256" height="160"/>
+ </tileset>
+ <tileset firstgid="2488" name="Pest0" tilewidth="16" tileheight="16" tilecount="96" columns="16">
+  <image source="Characters/Pest.png" width="256" height="96"/>
+ </tileset>
+ <tileset firstgid="2584" name="Money" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="Items/Money.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="2648" name="Chest0" tilewidth="16" tileheight="16" tilecount="24" columns="8">
+  <image source="Items/Chest0.png" width="128" height="48"/>
+ </tileset>
+ <tileset firstgid="2672" name="Undead" tilewidth="16" tileheight="16" tilecount="96" columns="16">
+  <image source="Characters/Undead.png" width="256" height="96"/>
+ </tileset>
+ <layer name="Floor" width="42" height="33">
+  <data encoding="csv">
+484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,181,182,182,182,182,182,182,182,182,182,182,182,182,182,182,182,183,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,201,1210,1211,1232,1211,1212,1215,1235,1236,1236,1236,1236,1236,1236,1236,1212,201,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,201,1231,1232,1232,1232,1233,181,182,182,182,182,182,182,182,183,1234,201,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,201,1231,1232,1232,1232,1233,223,10,10,10,10,10,10,10,201,1234,201,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,201,1231,1232,1462,1463,1464,381,10,181,182,182,182,182,182,182,1215,182,183,2048,2049,2049,2049,2049,2049,2049,484,484,484,484,484,484,484,484,484,484,484,484,484,
+484,484,484,484,201,1252,1232,1504,1484,1506,381,10,201,1856,1857,1857,1857,1857,1857,1556,1858,201,2056,2057,2057,2057,2057,2057,2057,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,
+484,484,484,484,221,182,182,363,1506,361,403,10,201,1864,1865,1865,1865,1865,1865,1556,1866,201,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,484,484,484,484,401,362,403,10,10,201,1864,1532,1558,1558,1558,1558,1576,1866,201,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,181,182,182,182,182,182,182,183,10,201,1864,1556,1865,1865,1865,1865,1865,1866,201,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,201,1210,1211,1211,1211,1212,1535,201,10,201,1864,1556,1865,1865,1865,1865,1865,1866,201,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,201,1231,1232,1232,1232,1233,1556,201,10,221,183,1213,181,182,182,182,182,182,223,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,201,1252,1253,1253,1253,1254,1556,201,10,10,201,1234,201,2048,2049,2049,2049,2049,2049,2052,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,221,182,182,182,182,183,1556,201,10,10,201,1234,201,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,484,484,484,484,484,201,1556,201,10,10,201,1234,201,2056,2057,2057,2057,2057,2057,2057,2057,2057,1287,1289,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,484,484,484,484,484,201,1556,201,10,10,201,1234,201,2056,2057,2057,2057,2057,2057,2057,1287,1288,1309,1309,1309,1288,1288,1289,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+484,484,484,181,182,182,182,182,223,1577,221,182,182,223,1234,201,2056,2057,2057,2057,2057,2057,1287,1309,1309,1309,1309,1309,1309,1309,1309,1288,1288,1288,1288,1289,2056,2057,2057,2057,2057,2057,
+484,484,484,201,1210,1211,1211,1211,1211,1211,1211,1211,1211,1212,1234,201,2056,2057,2057,2057,1287,1288,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1288,1289,2056,2057,2057,2057,
+484,484,484,201,1231,1232,1232,1232,1232,1232,1232,1232,1232,1233,1234,201,2056,2057,2057,1287,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1310,2056,2057,2057,2057,
+484,484,484,201,1231,1232,1232,1232,1232,1232,1232,1232,1232,1233,1215,201,2056,2057,1287,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1310,2056,2057,2057,2057,
+484,484,484,201,1231,1232,1232,1232,1232,1232,1232,1232,1232,1233,221,223,2056,1287,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1310,2056,2057,2057,2057,
+484,484,484,201,1252,1253,1253,1253,1253,1253,1253,1253,1253,1254,1215,1287,1288,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1310,2056,2057,2057,2057,
+484,484,484,221,182,182,182,182,182,182,182,182,182,182,223,1329,1330,1330,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1310,2056,2057,2057,2057,
+484,484,484,2048,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2049,2050,1308,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1310,2056,2057,2057,2057,
+484,484,484,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,1329,1330,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1331,2056,2057,2057,2057,
+484,484,484,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2049,2049,1329,1330,1330,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1309,1330,1331,2048,2057,2057,2057,2057,
+484,484,2048,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2049,2049,2049,1329,1330,1330,1309,1309,1309,1309,1309,1309,1309,1309,1310,2048,2049,2057,2057,2057,2057,2057,
+484,2048,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2049,2049,2049,1329,1330,1330,1330,1330,1330,1330,1330,1331,2056,2057,2057,2057,2057,2057,2057,
+484,2056,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2049,2049,2049,2049,2049,2049,2049,2049,2049,2058,2057,2057,2057,2057,2057,2057,
+2049,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,
+2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057,2057
+</data>
+ </layer>
+ <layer name="Background" width="42" height="33">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Objects" width="42" height="33">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="ObjectLayer">
+  <object id="1" type="BlockedTerrain" x="64" y="48" width="16" height="16"/>
+  <object id="4" type="BlockedTerrain" x="80" y="48" width="16" height="16"/>
+  <object id="5" type="BlockedTerrain" x="112" y="48" width="16" height="16"/>
+  <object id="6" type="BlockedTerrain" x="96" y="48" width="16" height="16"/>
+  <object id="7" type="BlockedTerrain" x="144" y="48" width="16" height="16"/>
+  <object id="8" type="BlockedTerrain" x="128" y="48" width="16" height="16"/>
+  <object id="9" type="BlockedTerrain" x="176" y="48" width="16" height="16"/>
+  <object id="10" type="BlockedTerrain" x="160" y="48" width="16" height="16"/>
+  <object id="11" type="BlockedTerrain" x="240" y="48" width="16" height="16"/>
+  <object id="12" type="BlockedTerrain" x="208" y="48" width="16" height="16"/>
+  <object id="13" type="BlockedTerrain" x="192" y="48" width="16" height="16"/>
+  <object id="14" type="BlockedTerrain" x="256" y="48" width="16" height="16"/>
+  <object id="15" type="BlockedTerrain" x="224" y="48" width="16" height="16"/>
+  <object id="16" type="BlockedTerrain" x="304" y="48" width="16" height="16"/>
+  <object id="17" type="BlockedTerrain" x="288" y="48" width="16" height="16"/>
+  <object id="18" type="BlockedTerrain" x="272" y="48" width="16" height="16"/>
+  <object id="19" type="BlockedTerrain" x="320" y="48" width="16" height="16"/>
+  <object id="20" type="BlockedTerrain" x="320" y="64" width="16" height="16"/>
+  <object id="21" type="BlockedTerrain" x="320" y="80" width="16" height="16"/>
+  <object id="22" type="BlockedTerrain" x="320" y="96" width="16" height="16"/>
+  <object id="23" type="BlockedTerrain" x="320" y="112" width="16" height="16"/>
+  <object id="25" type="BlockedTerrain" x="288" y="80" width="16" height="16"/>
+  <object id="26" type="BlockedTerrain" x="288" y="96" width="16" height="16"/>
+  <object id="27" type="BlockedTerrain" x="160" y="112" width="16" height="16"/>
+  <object id="28" type="BlockedTerrain" x="160" y="96" width="16" height="16"/>
+  <object id="29" type="BlockedTerrain" x="160" y="128" width="16" height="16"/>
+  <object id="30" type="BlockedTerrain" x="160" y="80" width="16" height="16"/>
+  <object id="31" type="BlockedTerrain" x="160" y="144" width="16" height="16"/>
+  <object id="32" type="BlockedTerrain" x="224" y="80" width="16" height="16"/>
+  <object id="33" type="BlockedTerrain" x="272" y="80" width="16" height="16"/>
+  <object id="34" type="BlockedTerrain" x="176" y="80" width="16" height="16"/>
+  <object id="35" type="BlockedTerrain" x="208" y="80" width="16" height="16"/>
+  <object id="36" type="BlockedTerrain" x="240" y="80" width="16" height="16"/>
+  <object id="37" type="BlockedTerrain" x="256" y="80" width="16" height="16"/>
+  <object id="38" type="BlockedTerrain" x="192" y="80" width="16" height="16"/>
+  <object id="40" type="BlockedTerrain" x="288" y="112" width="16" height="16"/>
+  <object id="46" type="BlockedTerrain" x="112" y="144" width="16" height="16"/>
+  <object id="48" type="BlockedTerrain" x="64" y="144" width="16" height="16"/>
+  <object id="49" type="BlockedTerrain" x="96" y="144" width="16" height="16"/>
+  <object id="50" type="BlockedTerrain" x="128" y="160" width="16" height="16"/>
+  <object id="51" type="BlockedTerrain" x="144" y="144" width="16" height="16"/>
+  <object id="52" type="BlockedTerrain" x="80" y="144" width="16" height="16"/>
+  <object id="53" type="BlockedTerrain" x="144" y="160" width="16" height="16"/>
+  <object id="54" type="BlockedTerrain" x="112" y="160" width="16" height="16"/>
+  <object id="55" type="BlockedTerrain" x="64" y="96" width="16" height="16"/>
+  <object id="56" type="BlockedTerrain" x="64" y="80" width="16" height="16"/>
+  <object id="57" type="BlockedTerrain" x="64" y="112" width="16" height="16"/>
+  <object id="58" type="BlockedTerrain" x="64" y="64" width="16" height="16"/>
+  <object id="59" type="BlockedTerrain" x="64" y="128" width="16" height="16"/>
+  <object id="60" type="BlockedTerrain" x="320" y="128" width="16" height="16"/>
+  <object id="61" type="BlockedTerrain" x="288" y="144" width="16" height="16"/>
+  <object id="62" type="BlockedTerrain" x="320" y="144" width="16" height="16"/>
+  <object id="63" type="BlockedTerrain" x="288" y="128" width="16" height="16"/>
+  <object id="64" type="BlockedTerrain" x="320" y="160" width="16" height="16"/>
+  <object id="65" type="BlockedTerrain" x="272" y="176" width="16" height="16"/>
+  <object id="66" type="BlockedTerrain" x="208" y="192" width="16" height="16"/>
+  <object id="67" type="BlockedTerrain" x="256" y="176" width="16" height="16"/>
+  <object id="68" type="BlockedTerrain" x="288" y="176" width="16" height="16"/>
+  <object id="69" type="BlockedTerrain" x="304" y="176" width="16" height="16"/>
+  <object id="70" type="BlockedTerrain" x="240" y="176" width="16" height="16"/>
+  <object id="71" type="BlockedTerrain" x="224" y="144" width="16" height="16"/>
+  <object id="72" type="BlockedTerrain" x="272" y="144" width="16" height="16"/>
+  <object id="73" type="BlockedTerrain" x="208" y="160" width="16" height="16"/>
+  <object id="74" type="BlockedTerrain" x="240" y="144" width="16" height="16"/>
+  <object id="75" type="BlockedTerrain" x="256" y="144" width="16" height="16"/>
+  <object id="76" type="BlockedTerrain" x="208" y="176" width="16" height="16"/>
+  <object id="83" type="BlockedTerrain" x="240" y="192" width="16" height="16"/>
+  <object id="84" type="BlockedTerrain" x="240" y="240" width="16" height="16"/>
+  <object id="85" type="BlockedTerrain" x="240" y="320" width="16" height="16"/>
+  <object id="86" type="BlockedTerrain" x="240" y="304" width="16" height="16"/>
+  <object id="87" type="BlockedTerrain" x="240" y="224" width="16" height="16"/>
+  <object id="88" type="BlockedTerrain" x="240" y="256" width="16" height="16"/>
+  <object id="89" type="BlockedTerrain" x="240" y="208" width="16" height="16"/>
+  <object id="90" type="BlockedTerrain" x="240" y="272" width="16" height="16"/>
+  <object id="91" type="BlockedTerrain" x="240" y="288" width="16" height="16"/>
+  <object id="92" type="BlockedTerrain" x="208" y="240" width="16" height="16"/>
+  <object id="93" type="BlockedTerrain" x="240" y="352" width="16" height="16"/>
+  <object id="94" type="BlockedTerrain" x="240" y="336" width="16" height="16"/>
+  <object id="95" type="BlockedTerrain" x="208" y="224" width="16" height="16"/>
+  <object id="96" type="BlockedTerrain" x="208" y="256" width="16" height="16"/>
+  <object id="97" type="BlockedTerrain" x="208" y="208" width="16" height="16"/>
+  <object id="98" type="BlockedTerrain" x="208" y="272" width="16" height="16"/>
+  <object id="99" type="BlockedTerrain" x="208" y="288" width="16" height="16"/>
+  <object id="100" type="BlockedTerrain" x="224" y="352" width="16" height="16"/>
+  <object id="101" type="BlockedTerrain" x="176" y="288" width="16" height="16"/>
+  <object id="102" type="BlockedTerrain" x="160" y="288" width="16" height="16"/>
+  <object id="103" type="BlockedTerrain" x="192" y="288" width="16" height="16"/>
+  <object id="104" type="BlockedTerrain" x="96" y="240" width="16" height="16"/>
+  <object id="105" type="BlockedTerrain" x="48" y="224" width="16" height="16"/>
+  <object id="106" type="BlockedTerrain" x="80" y="240" width="16" height="16"/>
+  <object id="107" type="BlockedTerrain" x="64" y="240" width="16" height="16"/>
+  <object id="108" type="BlockedTerrain" x="48" y="240" width="16" height="16"/>
+  <object id="109" type="BlockedTerrain" x="80" y="176" width="16" height="16"/>
+  <object id="110" type="BlockedTerrain" x="48" y="176" width="16" height="16"/>
+  <object id="111" type="BlockedTerrain" x="48" y="208" width="16" height="16"/>
+  <object id="112" type="BlockedTerrain" x="96" y="176" width="16" height="16"/>
+  <object id="113" type="BlockedTerrain" x="48" y="192" width="16" height="16"/>
+  <object id="114" type="BlockedTerrain" x="64" y="176" width="16" height="16"/>
+  <object id="115" type="BlockedTerrain" x="144" y="176" width="16" height="16"/>
+  <object id="116" type="BlockedTerrain" x="128" y="176" width="16" height="16"/>
+  <object id="117" type="BlockedTerrain" x="112" y="176" width="16" height="16"/>
+  <object id="118" type="BlockedTerrain" x="160" y="176" width="16" height="16"/>
+  <object id="119" type="BlockedTerrain" x="160" y="192" width="16" height="16"/>
+  <object id="120" type="BlockedTerrain" x="160" y="240" width="16" height="16"/>
+  <object id="121" type="BlockedTerrain" x="160" y="224" width="16" height="16"/>
+  <object id="122" type="BlockedTerrain" x="160" y="256" width="16" height="16"/>
+  <object id="123" type="BlockedTerrain" x="160" y="208" width="16" height="16"/>
+  <object id="124" type="BlockedTerrain" x="160" y="272" width="16" height="16"/>
+  <object id="125" type="BlockedTerrain" x="48" y="288" width="16" height="16"/>
+  <object id="126" type="BlockedTerrain" x="48" y="336" width="16" height="16"/>
+  <object id="127" type="BlockedTerrain" x="48" y="320" width="16" height="16"/>
+  <object id="128" type="BlockedTerrain" x="48" y="352" width="16" height="16"/>
+  <object id="129" type="BlockedTerrain" x="48" y="304" width="16" height="16"/>
+  <object id="130" type="BlockedTerrain" x="48" y="368" width="16" height="16"/>
+  <object id="131" type="BlockedTerrain" x="112" y="384" width="16" height="16"/>
+  <object id="132" type="BlockedTerrain" x="192" y="384" width="16" height="16"/>
+  <object id="133" type="BlockedTerrain" x="80" y="384" width="16" height="16"/>
+  <object id="134" type="BlockedTerrain" x="48" y="384" width="16" height="16"/>
+  <object id="135" type="BlockedTerrain" x="176" y="384" width="16" height="16"/>
+  <object id="136" type="BlockedTerrain" x="144" y="384" width="16" height="16"/>
+  <object id="137" type="BlockedTerrain" x="208" y="384" width="16" height="16"/>
+  <object id="138" type="BlockedTerrain" x="64" y="384" width="16" height="16"/>
+  <object id="139" type="BlockedTerrain" x="160" y="384" width="16" height="16"/>
+  <object id="140" type="BlockedTerrain" x="128" y="384" width="16" height="16"/>
+  <object id="141" type="BlockedTerrain" x="96" y="384" width="16" height="16"/>
+  <object id="142" type="BlockedTerrain" x="224" y="384" width="16" height="16"/>
+  <object id="143" type="BlockedTerrain" x="112" y="240" width="16" height="16"/>
+  <object id="144" type="BlockedTerrain" x="128" y="240" width="16" height="16"/>
+  <object id="145" type="BlockedTerrain" x="128" y="256" width="16" height="16"/>
+  <object id="146" type="BlockedTerrain" x="128" y="272" width="16" height="16"/>
+  <object id="147" type="BlockedTerrain" x="128" y="288" width="16" height="16"/>
+  <object id="148" type="BlockedTerrain" x="112" y="288" width="16" height="16"/>
+  <object id="149" type="BlockedTerrain" x="96" y="288" width="16" height="16"/>
+  <object id="150" type="BlockedTerrain" x="80" y="288" width="16" height="16"/>
+  <object id="151" type="BlockedTerrain" x="64" y="288" width="16" height="16"/>
+  <object id="152" type="BlockedTerrain" x="256" y="352" width="16" height="16"/>
+  <object id="153" type="BlockedTerrain" x="272" y="336" width="16" height="16"/>
+  <object id="154" type="BlockedTerrain" x="288" y="320" width="16" height="16"/>
+  <object id="155" type="BlockedTerrain" x="304" y="304" width="16" height="16"/>
+  <object id="156" type="BlockedTerrain" x="320" y="288" width="16" height="16"/>
+  <object id="157" type="BlockedTerrain" x="336" y="288" width="16" height="16"/>
+  <object id="158" type="BlockedTerrain" x="352" y="272" width="16" height="16"/>
+  <object id="159" type="BlockedTerrain" x="368" y="256" width="16" height="16"/>
+  <object id="160" type="BlockedTerrain" x="384" y="256" width="16" height="16"/>
+  <object id="161" type="BlockedTerrain" x="400" y="240" width="16" height="16"/>
+  <object id="162" type="BlockedTerrain" x="416" y="240" width="16" height="16"/>
+  <object id="163" type="BlockedTerrain" x="432" y="256" width="16" height="16"/>
+  <object id="164" type="BlockedTerrain" x="448" y="256" width="16" height="16"/>
+  <object id="165" type="BlockedTerrain" x="464" y="256" width="16" height="16"/>
+  <object id="166" type="BlockedTerrain" x="480" y="256" width="16" height="16"/>
+  <object id="167" type="BlockedTerrain" x="496" y="256" width="16" height="16"/>
+  <object id="168" type="BlockedTerrain" x="496" y="272" width="16" height="16"/>
+  <object id="169" type="BlockedTerrain" x="576" y="272" width="16" height="16"/>
+  <object id="170" type="BlockedTerrain" x="544" y="272" width="16" height="16"/>
+  <object id="171" type="BlockedTerrain" x="528" y="272" width="16" height="16"/>
+  <object id="172" type="BlockedTerrain" x="576" y="288" width="16" height="16"/>
+  <object id="173" type="BlockedTerrain" x="560" y="272" width="16" height="16"/>
+  <object id="174" type="BlockedTerrain" x="512" y="272" width="16" height="16"/>
+  <object id="175" type="BlockedTerrain" x="592" y="288" width="16" height="16"/>
+  <object id="176" type="BlockedTerrain" x="608" y="336" width="16" height="16"/>
+  <object id="177" type="BlockedTerrain" x="608" y="416" width="16" height="16"/>
+  <object id="178" type="BlockedTerrain" x="608" y="400" width="16" height="16"/>
+  <object id="179" type="BlockedTerrain" x="608" y="320" width="16" height="16"/>
+  <object id="180" type="BlockedTerrain" x="608" y="352" width="16" height="16"/>
+  <object id="181" type="BlockedTerrain" x="608" y="304" width="16" height="16"/>
+  <object id="182" type="BlockedTerrain" x="608" y="368" width="16" height="16"/>
+  <object id="183" type="BlockedTerrain" x="608" y="384" width="16" height="16"/>
+  <object id="184" type="BlockedTerrain" x="512" y="480" width="16" height="16"/>
+  <object id="185" type="BlockedTerrain" x="464" y="480" width="16" height="16"/>
+  <object id="186" type="BlockedTerrain" x="480" y="480" width="16" height="16"/>
+  <object id="187" type="BlockedTerrain" x="544" y="480" width="16" height="16"/>
+  <object id="188" type="BlockedTerrain" x="400" y="464" width="16" height="16"/>
+  <object id="189" type="BlockedTerrain" x="560" y="464" width="16" height="16"/>
+  <object id="190" type="BlockedTerrain" x="448" y="480" width="16" height="16"/>
+  <object id="191" type="BlockedTerrain" x="496" y="480" width="16" height="16"/>
+  <object id="192" type="BlockedTerrain" x="416" y="480" width="16" height="16"/>
+  <object id="193" type="BlockedTerrain" x="432" y="480" width="16" height="16"/>
+  <object id="194" type="BlockedTerrain" x="528" y="480" width="16" height="16"/>
+  <object id="195" type="BlockedTerrain" x="592" y="432" width="16" height="16"/>
+  <object id="196" type="BlockedTerrain" x="576" y="448" width="16" height="16"/>
+  <object id="197" type="BlockedTerrain" x="560" y="448" width="16" height="16"/>
+  <object id="198" type="BlockedTerrain" x="384" y="464" width="16" height="16"/>
+  <object id="199" type="BlockedTerrain" x="368" y="464" width="16" height="16"/>
+  <object id="200" type="BlockedTerrain" x="352" y="448" width="16" height="16"/>
+  <object id="201" type="BlockedTerrain" x="336" y="448" width="16" height="16"/>
+  <object id="202" type="BlockedTerrain" x="320" y="448" width="16" height="16"/>
+  <object id="203" type="BlockedTerrain" x="304" y="432" width="16" height="16"/>
+  <object id="204" type="BlockedTerrain" x="288" y="432" width="16" height="16"/>
+  <object id="205" type="BlockedTerrain" x="240" y="400" width="16" height="16"/>
+  <object id="206" type="BlockedTerrain" x="256" y="400" width="16" height="16"/>
+  <object id="207" type="BlockedTerrain" x="272" y="400" width="16" height="16"/>
+  <object id="208" type="BlockedTerrain" x="272" y="416" width="16" height="16"/>
+  <object id="209" name="Gate_0" type="Trigger" x="304" y="112" width="16" height="16"/>
+  <object id="211" name="Gate_1" type="Trigger" x="144" y="288" width="16" height="16"/>
+  <object id="212" name="Gate_2" type="Trigger" x="224" y="368" width="16" height="16"/>
+  <object id="217" name="Player" type="Character" x="448" y="368" width="16" height="16">
+   <properties>
+    <property name="SpriteScale" type="float" value="1"/>
+    <property name="Tag" value="Blocking;Player"/>
+    <property name="Texture" value="Game.Character.Player"/>
+    <property name="TextureRectLeft" type="int" value="0"/>
+    <property name="TextureRectTop" type="int" value="96"/>
+    <property name="bfocusCam" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="218" type="BlockedTerrain" x="208" y="144" width="16" height="16"/>
+  <object id="219" type="BlockedTerrain" x="320" y="176" width="16" height="16"/>
+  <object id="220" type="BlockedTerrain" x="224" y="400" width="16" height="16"/>
+  <object id="221" type="BlockedTerrain" x="272" y="432" width="16" height="16"/>
+  <object id="222" type="BlockedTerrain" x="304" y="448" width="16" height="16"/>
+  <object id="223" type="BlockedTerrain" x="352" y="464" width="16" height="16"/>
+  <object id="224" type="BlockedTerrain" x="400" y="480" width="16" height="16"/>
+  <object id="225" type="BlockedTerrain" x="560" y="480" width="16" height="16"/>
+  <object id="227" type="BlockedTerrain" x="592" y="448" width="16" height="16"/>
+  <object id="228" type="BlockedTerrain" x="608" y="432" width="16" height="16"/>
+  <object id="229" type="BlockedTerrain" x="608" y="288" width="16" height="16"/>
+  <object id="231" type="BlockedTerrain" x="432" y="240" width="16" height="16"/>
+  <object id="232" type="BlockedTerrain" x="384" y="240" width="16" height="16"/>
+  <object id="233" type="BlockedTerrain" x="352" y="256" width="16" height="16"/>
+  <object id="234" type="BlockedTerrain" x="336" y="272" width="16" height="16"/>
+  <object id="235" type="BlockedTerrain" x="304" y="288" width="16" height="16"/>
+  <object id="236" type="BlockedTerrain" x="288" y="304" width="16" height="16"/>
+  <object id="237" type="BlockedTerrain" x="272" y="320" width="16" height="16"/>
+  <object id="238" type="BlockedTerrain" x="256" y="336" width="16" height="16"/>
+  <object id="239" name="Enemy" type="Character" x="368" y="352" width="16" height="16">
+   <properties>
+    <property name="SpriteScale" type="float" value="1"/>
+    <property name="Tag" value="Blocking;Enemy"/>
+    <property name="Texture" value="Game.Character.Enemy.Pest"/>
+    <property name="TextureRectLeft" type="int" value="64"/>
+    <property name="TextureRectTop" type="int" value="32"/>
+    <property name="bfocusCam" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="240" name="Enemy" type="Character" x="144" y="336" width="16" height="16">
+   <properties>
+    <property name="SpriteScale" type="float" value="1"/>
+    <property name="Tag" value="Blocking;Enemy"/>
+    <property name="Texture" value="Game.Character.Enemy.Undead"/>
+    <property name="TextureRectLeft" type="int" value="128"/>
+    <property name="TextureRectTop" type="int" value="0"/>
+    <property name="bfocusCam" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="241" name="Enemy" type="Character" x="224" y="160" width="16" height="16">
+   <properties>
+    <property name="SpriteScale" type="float" value="1"/>
+    <property name="Tag" value="Blocking;Enemy"/>
+    <property name="Texture" value="Game.Character.Enemy.Undead"/>
+    <property name="TextureRectLeft" type="int" value="0"/>
+    <property name="TextureRectTop" type="int" value="32"/>
+    <property name="bfocusCam" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="242" name="Player" type="Character" x="96" y="96" width="16" height="16">
+   <properties>
+    <property name="SpriteScale" type="float" value="1"/>
+    <property name="Tag" value="Blocking;Player"/>
+    <property name="Texture" value="Game.Character.Player"/>
+    <property name="TextureRectLeft" type="int" value="32"/>
+    <property name="TextureRectTop" type="int" value="32"/>
+    <property name="bfocusCam" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Foreground" width="42" height="33">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
