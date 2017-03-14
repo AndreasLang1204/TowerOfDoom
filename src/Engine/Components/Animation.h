@@ -1,0 +1,96 @@
+#pragma once
+
+#include "../Game/ReferenceType.h"
+#include "../Game/GameObject.h"
+
+using namespace sf;
+using namespace ToD::Components;
+
+namespace ToD
+{
+	namespace Components
+	{
+		////////////////////////////////////////////////////////////
+		/// \brief Updates the turn based combat system.
+		///
+		////////////////////////////////////////////////////////////
+		class Animation
+			: public ReferenceType
+		{
+			/// Constructors, destructors
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief The constructor.
+			///
+			/// \param l_texture The texture which contains the animation frames.
+			///
+			////////////////////////////////////////////////////////////
+			explicit Animation(Texture* l_texture);
+
+			////////////////////////////////////////////////////////////
+			/// \brief The destructor.
+			///
+			////////////////////////////////////////////////////////////
+			~Animation() IsDefault__;
+
+			/// Properties
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			virtual RuntimeType GetRuntimeType() const override;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			static RuntimeType RuntimeType();
+
+			/// Methods
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Adds a new frame to the animation
+			///
+			/// \param l_frame The frame to add.
+			///
+			////////////////////////////////////////////////////////////
+			void AddFrame(const IntRect l_frame);
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the frame with the specified number.
+			///
+			/// \param l_frameNr The number of the frame which should be retrieved
+			/// \return The requested frame.
+			///
+			////////////////////////////////////////////////////////////
+			const IntRect GetFrame(const size_t l_frameNr) const;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Returns the number of frames
+			///
+			/// \return The frame count
+			///
+			////////////////////////////////////////////////////////////
+			size_t GetFrameCount() const;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Returns animation texture
+			///
+			/// \return The texture
+			///
+			////////////////////////////////////////////////////////////
+			const Texture* GetTexture() const;
+			
+
+			/// Members
+		private:
+			vector<IntRect>							m_frames;	///< The animation frames whithin the texture
+			Texture*								m_texture;	///< The texture which contains the animation frames
+		};
+	}
+}
