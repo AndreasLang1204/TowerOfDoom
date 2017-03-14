@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Abilities>
+  <Ability         Name="ability-basic-action-points-regeneration">
+    <Configuration AvailableAt="1" MaxLevel="1" NativeRole="-" Icon="icon-ability-basic-action-points-regeneration" Animation="animation-ability-basic-action-points-regeneration" />
+    <Usage         Target="Self" Range="None" Distance="0" Shape="Point" ShapeSize="0" />
+    <Trigger       Mode="OnTurnStart" Chance="{100}" />
+    <Cost          Target="-" Amount="{(Ability.Level.Current * 0) + 0}" />
+    <Effects       Attitudes="-" Categories="-">
+      <Immediate   Value="{Source.Role.ActionPoints.Maximal / 4} D {1}" Influence="Increasing" Type="-" Target="ActionPoints" />
+      <Immediate   Value="{Source.Role.Dexterity.Current / 3} D {1}" Influence="Increasing" Type="-" Target="ActionPoints" />
+    </Effects>
+  </Ability>
+  <Ability         Name="ability-basic-mace-and-shield">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-soldier" Icon="icon-ability-basic-mace-and-shield" Animation="animation-ability-basic-mace-and-shield" />
+    <Usage         Target="Single" Range="CloseRange" Distance="1" Shape="Point" ShapeSize="0" />
+    <Trigger       Mode="OnUserChoice" Chance="{100}" />
+    <Cost          Target="Role.ActionPoints" Amount="{(Ability.Level.Current * 2) + 1}" />
+    <Effects       Attitudes="Hostile" Categories="-">
+      <Immediate   Value="{1} D {3}" Influence="Decreasing" Type="Physical.Blunt" Target="HitPoints" />
+      <Immediate   Value="{1} D {Source.Ability.Level.Current / 2}" Influence="Decreasing" Type="Physical.Blunt" Target="HitPoints" />
+    </Effects>
+  </Ability>
+  
+  <!-- Basic Ability EXAMPLE 
+  <Ability Name="ability-basic-two-handed-axe-blow">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-soldier" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="CloseRange" Distance="-" />
+    <Cost          Value="4 + 2" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{1} D {6}" Type="Physical.Slash" Target="HitPoints" />
+      <Immediate Tag="-" Value="{1} D {Ability.Level}" Type="Physical.Slash" Target="HitPoints" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-basic-mace-and-shield">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-soldier" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="CloseRange" Distance="-" />
+    <Cost          Value="2 + 2" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{1} D {3}" Type="Physical.Blunt" Target="HitPoints" />
+      <Immediate Tag="-" Value="{1} D {Ability.Level / 2}" Type="Physical.Blunt" Target="HitPoints" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-basic-staff">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-mage" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="Projectile" Distance="8 + 2" />
+    <Cost          Value="3 + 2" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{3} D {3}" Type="Magic.Arcane" Target="HitPoints" />
+      <Immediate Tag="-" Value="{Ability.Level / 3} D {2}" Type="Magic.Arcane" Target="HitPoints" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-basic-double-daggers">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-archer" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="CloseRange" Distance="-" />
+    <Cost          Value="3 + 2" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{2} D {3}" Type="Physical.Pierce" Target="HitPoints" />
+      <Immediate Tag="-" Value="{1} D {Ability.Level / 2}" Type="Physical.Pierce" Target="HitPoints" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-basic-bow">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-archer" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="LongRange" Distance="12 + 1" />
+    <Cost          Value="5 + 2" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{1} D {8}" Type="Physical.Pierce" Target="HitPoints" />
+      <Immediate Tag="-" Value="{1} D {Ability.Distance / 2}" Type="Physical.Pierce" Target="HitPoints" />
+    </Effects>
+  </Ability>-->
+    
+  <!-- Mage - Tier 1 - Ability EXAMPLE 
+  <Ability Name="ability-mage-tier-1-healing-word">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-mage" />
+    <Target        Mode="Single" Attitude="FriendlyAndHostile" />
+    <Usage         Range="LongRange" Distance="4 + 2" />
+    <Cost          Value="6 + 2" />
+    <Effects>
+      <Selector Attitude="Hostile" Category="Undead" Tag="-" Influence="Decreasing" />
+      <Selector Attitude="Friendly" Category="-" Tag="-" Influence="Increasing" />
+      <Immediate Tag="-" Value="{2} D {2}" Type="Magic.Holy" Target="HitPoints" />
+      <Immediate Tag="-" Value="{Ability.Level / 3} D {3}" Type="Magic.Holy" Target="HitPoints" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-mage-tier-1-holy-smite">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-mage" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="Projectile" Distance="10" />
+    <Cost          Value="4 + 2" />
+    <Effects>
+      <Selector Attitude="Hostile" Category="-" Tag="-" Influence="Decreasing" />
+      <Selector Attitude="Hostile" Category="Undead" Tag="U" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{2} D {3}" Type="Magic.Holy" Target="HitPoints" />
+      <Immediate Tag="-" Value="{2 * (Ability.Level / 2)} D {2}" Type="Magic.Holy" Target="HitPoints" />
+      <Immediate Tag="U" Value="{2} D {5}" Type="Magic.Holy" Target="HitPoints" />
+      <Immediate Tag="U" Value="{2 * (Ability.Level / 2)} D {2}" Type="Magic.Holy" Target="HitPoints" />
+    </Effects>
+  </Ability>-->
+    
+  <!-- Archer - Tier 1 - Ability EXAMPLE
+  <Ability Name="ability-archer-tier-1-crippling-shot">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-archer" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="LongRange" Distance="10 + 1"/>
+    <Cost          Value="7 + 2"/>
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{1} D {6}" Type="Physical.Pierce" Target="HitPoints" />
+      <Immediate Tag="-" Value="{2} D {2}" Type="Physical.Pierce" Target="ActionPoints" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-archer-tier-1-piercing-arrow">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-archer" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="LongRange" Distance="10 + 1"/>
+    <Cost          Value="7 + 2" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{1} D {9}" Type="Physical.Pierce" Target="HitPoints" />
+      <Buff      Tag="-" Value="{1} D {4}" Type="Physical.Pierce" Target="Resistance.Physical" Duration="{2}" Duplication="DiscardOld" />
+    </Effects>
+  </Ability>-->
+    
+  <!-- Archer - Tier 2 - Ability EXAMPLE 
+  <Ability Name="ability-archer-tier-2-eagle-shot">
+    <Configuration AvailableAt="1" MaxLevel="7" NativeRole="role-archer" />
+    <Target        Mode="Multi" Attitude="Hostile" />
+    <Usage         Range="LongRange" Distance="10 + 1"/>
+    <Cost          Value="10 + 3"/>
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Decreasing" />
+      <Immediate Tag="-" Value="{1} D {6}" Type="Physical.Pierce" Target="HitPoints" />
+
+      E.g. damage over time
+      Duration: in turns
+      Duplication: DiscardOld (old effect is discarded and gets replaced by the new one), DiscardNew (new effect is discarded and does not replace old one), Stack (old and new effects will stack)
+      Trigger: TurnStart, TurnEnd, MoveStart, MoveEnd, ...
+      <OverTime  Tag="-" Value="" Type="" Target="" Duration="" Duplication="DiscardOld" Trigger="TurnStart" />
+        
+      E.g. fire blast with width of 3 tiles and length of 5 tiles
+      Shape: Cone, Circle, Rectangle
+      <Area     Tag="-" Value="" Type="" Target="" Shape="Cone" Size="3 5" />
+      
+    </Effects>
+  </Ability>-->
+    
+  <!-- Soldier - Tier 1 - Ability EXAMPLE 
+  <Ability Name="ability-soldier-tier-1-war-cry">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-soldier" />
+    <Target        Mode="Single" Attitude="Self" />
+    <Usage         Range="CloseRange" Distance="-"/>
+    <Cost          Value="6 + 3" />
+    <Effects>
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Increasing" />
+      <Buff      Tag="-" Value="{2} D {5}" Type="-" Target="Attack.CritRate" Duration="{2}" Duplication="DiscardOld" />
+      <Buff      Tag="-" Value="{10} D {2}" Type="-" Target="Attack.CritModifier" Duration="{2}" Duplication="DiscardOld" />
+    </Effects>
+  </Ability>
+  <Ability Name="ability-soldier-tier-1-taunt">
+    <Configuration AvailableAt="1" MaxLevel="10" NativeRole="role-soldier" />
+    <Target        Mode="Single" Attitude="Hostile" />
+    <Usage         Range="CloseRange" Distance="-"/>
+    <Cost          Value="4 + 3" />
+    <Effects>
+      Influence: Overwriting (old value gets temporary overwritten), Increasing (affected target values get increased), Decreasing (affected target values get decreased)
+      <Selector Attitude="-" Category="-" Tag="-" Influence="Overwriting" />
+      <Buff      Tag="-" Value="AI-This-Enemy" Type="-" Target="Controller" Duration="{Ability.Level}" Duplication="DiscardNew" />
+    </Effects>
+  </Ability>-->
+</Abilities>

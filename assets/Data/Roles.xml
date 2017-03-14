@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Roles>
+  <Role Name="role-soldier" Attitude="Friendly" Category="Human" Controller="Player">
+    <Attributes>
+      <Attribute Name="HitPoints"    Value="{(Role.Level.Current * 3) + 8}" />
+      <Attribute Name="ActionPoints" Value="{(Role.Level.Current * 1) + 8}" />
+      <Attribute Name="Dexterity"    Value="{(Role.Level.Current * 1) + 2}" />
+      <Attribute Name="Will"         Value="{(Role.Level.Current * 1) + 1}" />
+      <Attribute Name="Constitution" Value="{(Role.Level.Current * 2) + 3}" />
+      <CalculatedAttribute Name="Initiative">
+        <Modifier Value="{1} D {3}" Influence="Increasing" />
+        <Modifier Value="{Role.Dexterity.Current / 2} D {1}" Influence="Increasing" />
+      </CalculatedAttribute>
+    </Attributes>
+  </Role>
+  <Role Name="role-archer" Attitude="Friendly" Category="Human" Controller="Player">
+    <Attributes>
+      <Attribute Name="HitPoints"    Value="{(Role.Level.Current * 2) + 6}" />
+      <Attribute Name="ActionPoints" Value="{(Role.Level.Current * 2) + 9}" />
+      <Attribute Name="Dexterity"    Value="{(Role.Level.Current * 2) + 3}" />
+      <Attribute Name="Will"         Value="{(Role.Level.Current * 1) + 1}" />
+      <Attribute Name="Constitution" Value="{(Role.Level.Current * 1) + 2}" />
+      <CalculatedAttribute Name="Initiative">
+        <Modifier Value="{1} D {6}" Influence="Increasing" />
+        <Modifier Value="{Role.Dexterity.Current / 2} D {1}" Influence="Increasing" />
+      </CalculatedAttribute>
+    </Attributes>
+  </Role>
+  <Role Name="role-mage" Attitude="Friendly" Category="Human" Controller="Player">
+    <Attributes>
+      <Attribute Name="HitPoints"    Value="{(Role.Level.Current * 1) + 4}" />
+      <Attribute Name="ActionPoints" Value="{(Role.Level.Current * 3) + 10}" />
+      <Attribute Name="Dexterity"    Value="{(Role.Level.Current * 1) + 1}" />
+      <Attribute Name="Will"         Value="{(Role.Level.Current * 2) + 4}" />
+      <Attribute Name="Constitution" Value="{(Role.Level.Current * 1) + 1}" />
+      <CalculatedAttribute Name="Initiative">
+        <Modifier Value="{1} D {4}" Influence="Increasing" />
+        <Modifier Value="{Role.Dexterity.Current / 2} D {1}" Influence="Increasing" />
+      </CalculatedAttribute>
+    </Attributes>
+  </Role>
+  <Role Name="role-skeleton" Attitude="Hostile" Category="Undead" Controller="AI-Nearest-Enemy">
+    <Attributes>
+      <Attribute Name="HitPoints"    Value="{(Role.Level.Current * 2) + 5}" />
+      <Attribute Name="ActionPoints" Value="{(Role.Level.Current * 1) + 4}" />
+      <Attribute Name="Dexterity"    Value="{(Role.Level.Current * 1) + 2}" />
+      <Attribute Name="Will"         Value="{(Role.Level.Current * 1) + 1}" />
+      <Attribute Name="Constitution" Value="{(Role.Level.Current * 1) + 2}" />
+      <CalculatedAttribute Name="Initiative">
+        <Modifier Value="{1} D {4}" Influence="Increasing" />
+        <Modifier Value="{Role.Dexterity.Current / 2} D {1}" Influence="Increasing" />
+      </CalculatedAttribute>
+    </Attributes>
+  </Role>
+  <Role Name="role-zombie" Attitude="Hostile" Category="Undead" Controller="AI-Nearest-Enemy">
+    <Attributes>
+      <Attribute Name="HitPoints"    Value="{(Role.Level.Current * 4) + 12}" />
+      <Attribute Name="ActionPoints" Value="{(Role.Level.Current * 1) + 5}" />
+      <Attribute Name="Dexterity"    Value="{(Role.Level.Current * 1) + 1}" />
+      <Attribute Name="Will"         Value="{(Role.Level.Current * 1) + 1}" />
+      <Attribute Name="Constitution" Value="{(Role.Level.Current * 2) + 1}" />
+      <CalculatedAttribute Name="Initiative">
+        <Modifier Value="{1} D {2}" Influence="Increasing" />
+        <Modifier Value="{Role.Dexterity.Current / 2} D {1}" Influence="Increasing" />
+      </CalculatedAttribute>
+    </Attributes>
+  </Role>
+</Roles>
