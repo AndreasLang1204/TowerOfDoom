@@ -1,29 +1,25 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+**/pch
+*.db
+*.sdf
+*.opensdf
+*.opendb
+*.ilk
+*.ipch
+*.ipdb
+*.iobj
+*.pdb
+*.bsc
+*.iobj
+*.ipdb
+*.bsc
+*.pdb
+**/vs2015/Debug
+**/vs2015/Release
+**/vs2015/.vs
+**/tmp
+**/*-Debug.*
+**/*-Release.lib
+**/*.Tests*.dll
+**/*-Release.exp
+**/*-d-2.dll
+**/logs/*
