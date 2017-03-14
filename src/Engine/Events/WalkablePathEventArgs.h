@@ -1,0 +1,76 @@
+#pragma once
+
+#include "EventArgs.h"
+#include "../Components/MapLayerCellInfo.h"
+
+using namespace sf;
+
+namespace ToD
+{
+	namespace Events
+	{
+		////////////////////////////////////////////////////////////
+		/// \brief Holds information about a walkable path response event.
+		///
+		////////////////////////////////////////////////////////////
+		class WalkablePathEventArgs :
+			public EventArgs
+		{
+			/// Typedefs
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Definition of the walkable area type.
+			///
+			////////////////////////////////////////////////////////////
+			typedef list<MapLayerCellInfo*>									WalkablePath;
+
+			/// Constructors, destructors
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief The constructor.
+			///
+			/// \param l_path The walkable path.
+			/// \param l_target The target cell.
+			///
+			////////////////////////////////////////////////////////////
+			explicit WalkablePathEventArgs(const WalkablePath l_path, MapLayerCellInfo* l_target);
+
+			////////////////////////////////////////////////////////////
+			/// \brief The destructor.
+			///
+			////////////////////////////////////////////////////////////
+			~WalkablePathEventArgs() IsDefault__;
+
+			/// Properies
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			virtual RuntimeType GetRuntimeType() const override;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the walkable path.
+			///
+			/// \return The walkable path.
+			///
+			////////////////////////////////////////////////////////////
+			const WalkablePath& GetPath() const;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the target cell.
+			///
+			/// \return The target cell.
+			///
+			////////////////////////////////////////////////////////////
+			MapLayerCellInfo* GetTarget() const;
+
+			/// Members
+		private:
+			WalkablePath													m_path; ///< The walkable path.
+			MapLayerCellInfo*												m_target; ///< The target cell.
+		};
+	}
+}

@@ -1,0 +1,66 @@
+#pragma once 
+
+#include "../Managers/ObjectContainer.h"
+#include "../States/AGameState.h"
+
+using namespace ToD::Managers;
+
+namespace ToD
+{
+	namespace Factories
+	{
+		////////////////////////////////////////////////////////////
+		/// \brief Used to create game states.
+		///
+		////////////////////////////////////////////////////////////
+		class StateFactory :
+			public ObjectContainer::SharedObject
+		{
+			/// Constructors, destructors
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief The constructor (default constructor).
+			///
+			////////////////////////////////////////////////////////////
+			StateFactory() IsDefault__;
+
+			////////////////////////////////////////////////////////////
+			/// \brief The destructor.
+			///
+			////////////////////////////////////////////////////////////
+			~StateFactory() IsDefault__;
+
+			/// Properties
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			virtual RuntimeType GetRuntimeType() const override;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			static RuntimeType RuntimeType();
+
+			/// Methods
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Creates a new game state.
+			/// 
+			/// \param l_name The name of the game state to create.
+			///
+			/// \return The created game state.
+			///
+			/// \exception std::exception: name is invalid.
+			///
+			////////////////////////////////////////////////////////////
+			AGameState* Create(const string l_name) const;
+		};
+	}
+}

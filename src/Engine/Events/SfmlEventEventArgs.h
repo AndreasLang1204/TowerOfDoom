@@ -1,0 +1,59 @@
+#pragma once
+
+#include "EventArgs.h"
+#include "../Game/GameObject.h"
+
+using namespace sf;
+using namespace std;
+
+namespace ToD
+{
+	namespace Events
+	{
+		////////////////////////////////////////////////////////////
+		/// \brief Holds information about a path request.
+		///
+		////////////////////////////////////////////////////////////
+		class SfmlEventEventArgs :
+			public EventArgs
+		{
+			/// Constructors, destructors
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief The constructor.
+			///
+			/// \param l_event The processed SFML event.
+			///
+			////////////////////////////////////////////////////////////
+			explicit SfmlEventEventArgs(Event l_event);
+
+			////////////////////////////////////////////////////////////
+			/// \brief The destructor.
+			///
+			////////////////////////////////////////////////////////////
+			virtual ~SfmlEventEventArgs() IsDefault__;
+
+			/// Properies
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			virtual RuntimeType GetRuntimeType() const override;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the processed SFML event.
+			///
+			/// \return The processed SFML event.
+			///
+			////////////////////////////////////////////////////////////
+			Event GetEvent() const;
+
+			/// Members
+		private:
+			Event															m_event; ///< The processed SFML event.
+		};
+	}
+}
