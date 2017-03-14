@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="General">
+      <UniqueIdentifier>{a3fda105-7823-4074-9628-70030de43a57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{a299c20d-626c-43a0-bee3-26f8333c3884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{e7aaa3b3-99ef-4cbe-84c7-1b324daf1744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialization">
+      <UniqueIdentifier>{4f58f0f7-b1f9-4f3b-afc1-bdf3f6631a65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialization\Utility">
+      <UniqueIdentifier>{468f2391-ecdb-4de3-b9e7-4086642abef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events">
+      <UniqueIdentifier>{fea1015b-9bc9-4ab8-a085-8190ff673324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{92d50a3c-8b65-47af-8c48-ae09629084ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{91e2b324-683e-4f76-940a-2fee310d977b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factories">
+      <UniqueIdentifier>{4c7f513c-0ea8-4753-88d2-0128ece7bd5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\GUI">
+      <UniqueIdentifier>{082e11d6-3922-4933-94e0-34a577b3f20a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{97b1cdd3-fa59-4fb4-959d-fa6270edddac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Data">
+      <UniqueIdentifier>{805dd5fa-061c-48e6-97fc-51a8b0f3e682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calc">
+      <UniqueIdentifier>{53dc781d-0367-4ff2-b9e6-b89be00f543b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\CharacterControllers">
+      <UniqueIdentifier>{b828fc98-eadb-4bdf-8f8d-9d6098375622}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\CharacterControllers\ControllerCommands">
+      <UniqueIdentifier>{f859bc6f-b55c-480a-8bea-26827d349518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Role">
+      <UniqueIdentifier>{6abf7100-6d80-4fe4-bf85-cedfa74b7e1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Engine\General\Engine.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\Export.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\stdafx.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\targetver.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\easylogging++.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\ReferenceType.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\ObjectContainer.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\IEnumerable.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\AGameComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GameComponentType.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\GameObject.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\GameObjectTag.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\KeyBinding.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\rapidxml.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\rapidxml_iterators.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\rapidxml_print.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\rapidxml_utils.hpp">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\GameConfig.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\EnumerationBase.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\Enumeration.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Serialization\Utility\Xml.h">
+      <Filter>Serialization\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Serialization\Utility\File.h">
+      <Filter>Serialization\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Serialization\Utility\Str.h">
+      <Filter>Serialization\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\KeyBindingState.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\KeyBindingName.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\KeyboardKey.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\GameLogic.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\EventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\EventInvoker.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\AEventInvoker.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\EventDelegate.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\EventBus.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\EventType.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\InputManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\States\AGameState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\GameObjectEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\GameComponentRegistration.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\GameStateManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\States\GameStateUpdateResult.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Factories\StateFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\States\StartScreen.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GUI\AGUIComponent.h">
+      <Filter>Components\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Renderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\RenderablePriority.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\SfmlEventEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GUI\GUIStartScreen.h">
+      <Filter>Components\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\RenderManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\GameObjectManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\AManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Factories\ObjectFactory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Managers\ResourceManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\States\GameplayScreen.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\General\NLTmxMap.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\MapLayerRenderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GUI\GUIGameplayScreen.h">
+      <Filter>Components\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\Constants.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\MouseEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\GameMapEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CameraFocusable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GridCursorRenderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CameraMoveable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\Functions.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\TurnSystem.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\TurnSystemRoundState.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\TurnSystemCharacterState.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\PlayableCharacter.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\SpriteRenderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\MapLayerCellInfo.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\MapLayerCollision.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\Activateable.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Calc\Value.h">
+      <Filter>Calc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Calc\RandomizedValue.h">
+      <Filter>Calc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\KeyInputEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Game\Randomizer.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\WalkableAreaEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\RequestWalkableAreaEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\WalkableAreaRenderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GridCursorLogic.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\GridCursorEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\GridCursorClickedEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\GridCellClickedEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\RequestWalkablePathEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Events\WalkablePathEventArgs.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\PathMoveable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Factories\ObjectFactoryPrefabCategory.h">
+      <Filter>Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ACharacterControllerInstance.h">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\PlayerCharacterControllerInstance.h">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ArtificialCharacterControllerInstance.h">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\PathRenderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\CharacterControllerAction.h">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\ACharacterControllerCommand.h">
+      <Filter>Components\CharacterControllers\ControllerCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\EndTurnCommand.h">
+      <Filter>Components\CharacterControllers\ControllerCommands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\States\CreditScreen.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\GUI\GUICreditScreen.h">
+      <Filter>Components\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\CharacterSelectorRenderable.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Role\ARoleAttribute.h">
+      <Filter>Components\Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Role\CalculatedRoleAttribute.h">
+      <Filter>Components\Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Role\DicedRoleAttribute.h">
+      <Filter>Components\Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Role\CharacterRole.h">
+      <Filter>Components\Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Role\CreatureTypeTag.h">
+      <Filter>Components\Role</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Engine\Components\Animation.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Engine\General\dllmain.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\General\Engine.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\General\stdafx.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\ReferenceType.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\ObjectContainer.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\AGameComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GameComponentType.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\GameObject.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\GameObjectTag.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\KeyBinding.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\GameConfig.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\EnumerationBase.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\Enumeration.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Serialization\Utility\File.cpp">
+      <Filter>Serialization\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Serialization\Utility\Xml.cpp">
+      <Filter>Serialization\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Serialization\Utility\Str.cpp">
+      <Filter>Serialization\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\KeyBindingState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\KeyBindingName.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\KeyboardKey.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\GameLogic.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\EventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\AEventInvoker.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\EventDelegate.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\EventInvoker.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\EventBus.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\EventType.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\InputManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\States\AGameState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\GameObjectEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\GameComponentRegistration.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\GameStateManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\States\GameStateUpdateResult.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Factories\StateFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\States\StartScreen.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GUI\AGUIComponent.cpp">
+      <Filter>Components\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Renderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\RenderablePriority.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\SfmlEventEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GUI\GUIStartScreen.cpp">
+      <Filter>Components\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\RenderManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\GameObjectManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\AManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Factories\ObjectFactory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\ResourceManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\States\GameplayScreen.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\General\NLTmxMap.cpp">
+      <Filter>General</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\MapLayerRenderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GUI\GUIGameplayScreen.cpp">
+      <Filter>Components\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\MouseEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\GameMapEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CameraFocusable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GridCursorRenderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CameraMoveable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\TurnSystem.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\TurnSystemRoundState.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\TurnSystemCharacterState.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\PlayableCharacter.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\SpriteRenderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\MapLayerCellInfo.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\MapLayerCollision.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\Activateable.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Calc\Value.cpp">
+      <Filter>Calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Calc\RandomizedValue.cpp">
+      <Filter>Calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\KeyInputEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Game\Randomizer.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\WalkableAreaEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\RequestWalkableAreaEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\WalkableAreaRenderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GridCursorLogic.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\GridCursorEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\GridCursorClickedEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\GridCellClickedEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\RequestWalkablePathEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Events\WalkablePathEventArgs.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\PathMoveable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Factories\ObjectFactoryPrefabCategory.cpp">
+      <Filter>Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ACharacterControllerInstance.cpp">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ArtificialCharacterControllerInstance.cpp">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\PlayerCharacterControllerInstance.cpp">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\PathRenderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\CharacterControllerAction.cpp">
+      <Filter>Components\CharacterControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\ACharacterControllerCommand.cpp">
+      <Filter>Components\CharacterControllers\ControllerCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\EndTurnCommand.cpp">
+      <Filter>Components\CharacterControllers\ControllerCommands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\States\CreditScreen.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\GUI\GUICreditScreen.cpp">
+      <Filter>Components\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\CharacterSelectorRenderable.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Role\ARoleAttribute.cpp">
+      <Filter>Components\Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Role\CalculatedRoleAttribute.cpp">
+      <Filter>Components\Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Role\DicedRoleAttribute.cpp">
+      <Filter>Components\Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Role\CharacterRole.cpp">
+      <Filter>Components\Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Role\CreatureTypeTag.cpp">
+      <Filter>Components\Role</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Components\Animation.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\assets\Data\Roles.xml">
+      <Filter>Assets\Data</Filter>
+    </Xml>
+    <Xml Include="..\assets\Data\Abilities.xml">
+      <Filter>Assets\Data</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

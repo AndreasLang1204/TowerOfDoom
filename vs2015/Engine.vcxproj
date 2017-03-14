@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F46F4AD2-A2FB-4900-8866-82B80B24AB11}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(Platform)\$(Configuration)$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)-$(PlatformShortName)-$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\tmp\$(Platform)\$(Configuration)$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)-$(PlatformShortName)-$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SFMLROOT)/include;$(TGUIROOT)/include;../src/Engine/General/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFMLROOT)/lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tgui-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-network-d.lib;sfml-audio-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SFMLROOT)/include;$(TGUIROOT)/include;../src/Engine/General/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFMLROOT)/lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tgui.lib;sfml-graphics.lib;sfml-system.lib;sfml-window.lib;sfml-network.lib;sfml-audio.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Engine\Calc\RandomizedValue.h" />
+    <ClInclude Include="..\src\Engine\Calc\Value.h" />
+    <ClInclude Include="..\src\Engine\Components\AGameComponent.h" />
+    <ClInclude Include="..\src\Engine\Components\Animation.h" />
+    <ClInclude Include="..\src\Engine\Components\CameraFocusable.h" />
+    <ClInclude Include="..\src\Engine\Components\CameraMoveable.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ACharacterControllerInstance.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ArtificialCharacterControllerInstance.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\CharacterControllerAction.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\ACharacterControllerCommand.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\EndTurnCommand.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterControllers\PlayerCharacterControllerInstance.h" />
+    <ClInclude Include="..\src\Engine\Components\CharacterSelectorRenderable.h" />
+    <ClInclude Include="..\src\Engine\Components\GameComponentType.h" />
+    <ClInclude Include="..\src\Engine\Components\GridCursorLogic.h" />
+    <ClInclude Include="..\src\Engine\Components\GridCursorRenderable.h" />
+    <ClInclude Include="..\src\Engine\Components\GUI\AGUIComponent.h" />
+    <ClInclude Include="..\src\Engine\Components\GUI\GUICreditScreen.h" />
+    <ClInclude Include="..\src\Engine\Components\GUI\GUIGameplayScreen.h" />
+    <ClInclude Include="..\src\Engine\Components\GUI\GUIStartScreen.h" />
+    <ClInclude Include="..\src\Engine\Components\MapLayerCellInfo.h" />
+    <ClInclude Include="..\src\Engine\Components\MapLayerCollision.h" />
+    <ClInclude Include="..\src\Engine\Components\MapLayerRenderable.h" />
+    <ClInclude Include="..\src\Engine\Components\PathMoveable.h" />
+    <ClInclude Include="..\src\Engine\Components\PathRenderable.h" />
+    <ClInclude Include="..\src\Engine\Components\PlayableCharacter.h" />
+    <ClInclude Include="..\src\Engine\Components\Renderable.h" />
+    <ClInclude Include="..\src\Engine\Components\RenderablePriority.h" />
+    <ClInclude Include="..\src\Engine\Components\Role\CalculatedRoleAttribute.h" />
+    <ClInclude Include="..\src\Engine\Components\Role\CreatureTypeTag.h" />
+    <ClInclude Include="..\src\Engine\Components\Role\DicedRoleAttribute.h" />
+    <ClInclude Include="..\src\Engine\Components\Role\CharacterRole.h" />
+    <ClInclude Include="..\src\Engine\Components\Role\ARoleAttribute.h" />
+    <ClInclude Include="..\src\Engine\Components\SpriteRenderable.h" />
+    <ClInclude Include="..\src\Engine\Components\TurnSystem.h" />
+    <ClInclude Include="..\src\Engine\Components\TurnSystemCharacterState.h" />
+    <ClInclude Include="..\src\Engine\Components\TurnSystemRoundState.h" />
+    <ClInclude Include="..\src\Engine\Components\WalkableAreaRenderable.h" />
+    <ClInclude Include="..\src\Engine\Events\AEventInvoker.h" />
+    <ClInclude Include="..\src\Engine\Events\EventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\EventDelegate.h" />
+    <ClInclude Include="..\src\Engine\Events\EventInvoker.h" />
+    <ClInclude Include="..\src\Engine\Events\EventType.h" />
+    <ClInclude Include="..\src\Engine\Events\GameMapEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\GameObjectEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\GridCellClickedEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\GridCursorClickedEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\GridCursorEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\KeyInputEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\MouseEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\RequestWalkableAreaEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\RequestWalkablePathEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\SfmlEventEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\WalkableAreaEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Events\WalkablePathEventArgs.h" />
+    <ClInclude Include="..\src\Engine\Factories\ObjectFactory.h" />
+    <ClInclude Include="..\src\Engine\Factories\ObjectFactoryPrefabCategory.h" />
+    <ClInclude Include="..\src\Engine\Factories\StateFactory.h" />
+    <ClInclude Include="..\src\Engine\Game\Constants.h" />
+    <ClInclude Include="..\src\Engine\Game\Enumeration.h" />
+    <ClInclude Include="..\src\Engine\Game\EnumerationBase.h" />
+    <ClInclude Include="..\src\Engine\Game\Functions.h" />
+    <ClInclude Include="..\src\Engine\Game\Game.h" />
+    <ClInclude Include="..\src\Engine\Game\GameComponentRegistration.h" />
+    <ClInclude Include="..\src\Engine\Game\GameConfig.h" />
+    <ClInclude Include="..\src\Engine\Game\GameObject.h" />
+    <ClInclude Include="..\src\Engine\Game\GameObjectTag.h" />
+    <ClInclude Include="..\src\Engine\Game\Activateable.h" />
+    <ClInclude Include="..\src\Engine\Game\IEnumerable.h" />
+    <ClInclude Include="..\src\Engine\Game\KeyBinding.h" />
+    <ClInclude Include="..\src\Engine\Game\KeyBindingName.h" />
+    <ClInclude Include="..\src\Engine\Game\KeyBindingState.h" />
+    <ClInclude Include="..\src\Engine\Game\KeyboardKey.h" />
+    <ClInclude Include="..\src\Engine\Game\Randomizer.h" />
+    <ClInclude Include="..\src\Engine\Game\ReferenceType.h" />
+    <ClInclude Include="..\src\Engine\General\easylogging++.h" />
+    <ClInclude Include="..\src\Engine\General\Engine.h" />
+    <ClInclude Include="..\src\Engine\General\Export.h" />
+    <ClInclude Include="..\src\Engine\General\NLTmxMap.h" />
+    <ClInclude Include="..\src\Engine\General\rapidxml.hpp" />
+    <ClInclude Include="..\src\Engine\General\rapidxml_iterators.hpp" />
+    <ClInclude Include="..\src\Engine\General\rapidxml_print.hpp" />
+    <ClInclude Include="..\src\Engine\General\rapidxml_utils.hpp" />
+    <ClInclude Include="..\src\Engine\General\stdafx.h" />
+    <ClInclude Include="..\src\Engine\General\targetver.h" />
+    <ClInclude Include="..\src\Engine\Managers\AManager.h" />
+    <ClInclude Include="..\src\Engine\Managers\EventBus.h" />
+    <ClInclude Include="..\src\Engine\Managers\GameLogic.h" />
+    <ClInclude Include="..\src\Engine\Managers\GameObjectManager.h" />
+    <ClInclude Include="..\src\Engine\Managers\GameStateManager.h" />
+    <ClInclude Include="..\src\Engine\Managers\InputManager.h" />
+    <ClInclude Include="..\src\Engine\Managers\ObjectContainer.h" />
+    <ClInclude Include="..\src\Engine\Managers\RenderManager.h" />
+    <ClInclude Include="..\src\Engine\Managers\ResourceManager.h" />
+    <ClInclude Include="..\src\Engine\Serialization\Utility\File.h" />
+    <ClInclude Include="..\src\Engine\Serialization\Utility\Str.h" />
+    <ClInclude Include="..\src\Engine\Serialization\Utility\Xml.h" />
+    <ClInclude Include="..\src\Engine\States\AGameState.h" />
+    <ClInclude Include="..\src\Engine\States\CreditScreen.h" />
+    <ClInclude Include="..\src\Engine\States\GameplayScreen.h" />
+    <ClInclude Include="..\src\Engine\States\GameStateUpdateResult.h" />
+    <ClInclude Include="..\src\Engine\States\StartScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Engine\Calc\RandomizedValue.cpp" />
+    <ClCompile Include="..\src\Engine\Calc\Value.cpp" />
+    <ClCompile Include="..\src\Engine\Components\AGameComponent.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Animation.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CameraFocusable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CameraMoveable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ACharacterControllerInstance.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ArtificialCharacterControllerInstance.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\CharacterControllerAction.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\ACharacterControllerCommand.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\ControllerCommands\EndTurnCommand.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterControllers\PlayerCharacterControllerInstance.cpp" />
+    <ClCompile Include="..\src\Engine\Components\CharacterSelectorRenderable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GameComponentType.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GridCursorLogic.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GridCursorRenderable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GUI\AGUIComponent.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GUI\GUICreditScreen.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GUI\GUIGameplayScreen.cpp" />
+    <ClCompile Include="..\src\Engine\Components\GUI\GUIStartScreen.cpp" />
+    <ClCompile Include="..\src\Engine\Components\MapLayerCellInfo.cpp" />
+    <ClCompile Include="..\src\Engine\Components\MapLayerCollision.cpp" />
+    <ClCompile Include="..\src\Engine\Components\MapLayerRenderable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\PathMoveable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\PathRenderable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\PlayableCharacter.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Renderable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\RenderablePriority.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Role\CalculatedRoleAttribute.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Role\CreatureTypeTag.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Role\DicedRoleAttribute.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Role\CharacterRole.cpp" />
+    <ClCompile Include="..\src\Engine\Components\Role\ARoleAttribute.cpp" />
+    <ClCompile Include="..\src\Engine\Components\SpriteRenderable.cpp" />
+    <ClCompile Include="..\src\Engine\Components\TurnSystem.cpp" />
+    <ClCompile Include="..\src\Engine\Components\TurnSystemCharacterState.cpp" />
+    <ClCompile Include="..\src\Engine\Components\TurnSystemRoundState.cpp" />
+    <ClCompile Include="..\src\Engine\Components\WalkableAreaRenderable.cpp" />
+    <ClCompile Include="..\src\Engine\Events\AEventInvoker.cpp" />
+    <ClCompile Include="..\src\Engine\Events\EventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\EventDelegate.cpp" />
+    <ClCompile Include="..\src\Engine\Events\EventInvoker.cpp" />
+    <ClCompile Include="..\src\Engine\Events\EventType.cpp" />
+    <ClCompile Include="..\src\Engine\Events\GameMapEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\GameObjectEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\GridCellClickedEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\GridCursorClickedEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\GridCursorEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\KeyInputEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\MouseEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\RequestWalkableAreaEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\RequestWalkablePathEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\SfmlEventEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\WalkableAreaEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Events\WalkablePathEventArgs.cpp" />
+    <ClCompile Include="..\src\Engine\Factories\ObjectFactory.cpp" />
+    <ClCompile Include="..\src\Engine\Factories\ObjectFactoryPrefabCategory.cpp" />
+    <ClCompile Include="..\src\Engine\Factories\StateFactory.cpp" />
+    <ClCompile Include="..\src\Engine\Game\Activateable.cpp" />
+    <ClCompile Include="..\src\Engine\Game\Enumeration.cpp" />
+    <ClCompile Include="..\src\Engine\Game\EnumerationBase.cpp" />
+    <ClCompile Include="..\src\Engine\Game\Game.cpp" />
+    <ClCompile Include="..\src\Engine\Game\GameComponentRegistration.cpp" />
+    <ClCompile Include="..\src\Engine\Game\GameConfig.cpp" />
+    <ClCompile Include="..\src\Engine\Game\GameObject.cpp" />
+    <ClCompile Include="..\src\Engine\Game\GameObjectTag.cpp" />
+    <ClCompile Include="..\src\Engine\Game\KeyBinding.cpp" />
+    <ClCompile Include="..\src\Engine\Game\KeyBindingName.cpp" />
+    <ClCompile Include="..\src\Engine\Game\KeyBindingState.cpp" />
+    <ClCompile Include="..\src\Engine\Game\KeyboardKey.cpp" />
+    <ClCompile Include="..\src\Engine\Game\Randomizer.cpp" />
+    <ClCompile Include="..\src\Engine\Game\ReferenceType.cpp" />
+    <ClCompile Include="..\src\Engine\General\dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\General\Engine.cpp" />
+    <ClCompile Include="..\src\Engine\General\NLTmxMap.cpp" />
+    <ClCompile Include="..\src\Engine\General\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Managers\AManager.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\EventBus.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\GameLogic.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\GameObjectManager.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\GameStateManager.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\InputManager.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\ObjectContainer.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\RenderManager.cpp" />
+    <ClCompile Include="..\src\Engine\Managers\ResourceManager.cpp" />
+    <ClCompile Include="..\src\Engine\Serialization\Utility\File.cpp" />
+    <ClCompile Include="..\src\Engine\Serialization\Utility\Str.cpp" />
+    <ClCompile Include="..\src\Engine\Serialization\Utility\Xml.cpp" />
+    <ClCompile Include="..\src\Engine\States\AGameState.cpp" />
+    <ClCompile Include="..\src\Engine\States\CreditScreen.cpp" />
+    <ClCompile Include="..\src\Engine\States\GameplayScreen.cpp" />
+    <ClCompile Include="..\src\Engine\States\GameStateUpdateResult.cpp" />
+    <ClCompile Include="..\src\Engine\States\StartScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\assets\Data\Abilities.xml" />
+    <Xml Include="..\assets\Data\Roles.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
