@@ -1,0 +1,120 @@
+#pragma once
+
+#include "ObjectContainer.h"
+
+#include "../Game/GameObject.h"
+
+using namespace std;
+
+namespace ToD
+{
+	namespace Managers
+	{
+		////////////////////////////////////////////////////////////
+		/// \brief Updates game components following a pre-defined update order.
+		///
+		////////////////////////////////////////////////////////////
+		class GameLogic :
+			public ObjectContainer::SharedObject
+		{
+			/// Typedefs
+		private:
+			////////////////////////////////////////////////////////////
+			/// \brief Defines an array of game component types.
+			///
+			////////////////////////////////////////////////////////////
+			typedef vector<GameComponentType::EntryPtr>						ComponentTypeArray;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Defines an array of game components.
+			///
+			////////////////////////////////////////////////////////////
+			typedef vector<AGameComponent*>									ComponentArray;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Defines a dictionary of game components grouped by their owning object.
+			///
+			////////////////////////////////////////////////////////////
+			typedef unordered_map<RuntimeID, ComponentArray>				ComponentDictionary;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Defines a dictionary of game components dictionaries grouped by the update order.
+			///
+			////////////////////////////////////////////////////////////
+			typedef unordered_map<GameComponentType::EntryPtr, ComponentDictionary>	LogicDictionary;
+
+			/// Constructors, destructors
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief The constructor (default constructor).
+			///
+			////////////////////////////////////////////////////////////
+			GameLogic();
+
+			////////////////////////////////////////////////////////////
+			/// \brief The destructor.
+			///
+			////////////////////////////////////////////////////////////
+			~GameLogic();
+
+			/// Properties
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			virtual RuntimeType GetRuntimeType() const override;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			static RuntimeType RuntimeType();
+
+			/// Methods
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Registers a component.
+			///
+			/// \param l_objectIentifier Id of the owning game object.
+			/// \param l_component The component to register.
+			///
+			////////////////////////////////////////////////////////////
+			void RegisterComponent(const RuntimeID l_objectIentifier, AGameComponent* l_component);
+
+			////////////////////////////////////////////////////////////
+			/// \brief Removes all components registered by an object.
+			///
+			/// \param l_objectIentifier Id of the owning game object.
+			///
+			////////////////////////////////////////////////////////////
+			void RemoveComponent(const RuntimeID l_objectIentifier);
+
+			////////////////////////////////////////////////////////////
+			/// \brief Sets the update order for the game logic.
+			///
+			/// \param l_updateOrder The updated order to use.
+			///
+			////////////////////////////////////////////////////////////
+			void SetUpdateOrder(const ComponentTypeArray l_updateOrder);
+
+			////////////////////////////////////////////////////////////
+			/// \brief Updates the game components.
+			///
+			/// \param l_gameTime Provides a snapshot of timing values.
+			///
+			////////////////////////////////////////////////////////////
+			void Update(const Time l_gameTime);
+
+			/// Members
+		private:
+			ComponentTypeArray												m_updateOrder; ///< The component update order.
+			LogicDictionary													m_logicLayers; ///< COntains all logic layers to update.
+		};
+
+	}
+}

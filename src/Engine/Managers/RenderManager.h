@@ -1,0 +1,97 @@
+#pragma once
+
+#include "ObjectContainer.h"
+#include "../Components/Renderable.h"
+#include "../Game/GameObject.h"
+
+using namespace std;
+using namespace ToD::Components;
+
+namespace ToD
+{
+	namespace Managers
+	{
+		////////////////////////////////////////////////////////////
+		/// \brief Renders game components to the screen.
+		///
+		////////////////////////////////////////////////////////////
+		class RenderManager :
+			public ObjectContainer::SharedObject
+		{
+			/// Typedefs
+		private:
+			////////////////////////////////////////////////////////////
+			/// \brief Definition of the component dictionary type.
+			///
+			////////////////////////////////////////////////////////////
+			typedef unordered_map<RuntimeID, vector<Renderable*>>			ComponentDictionary;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Definition of the layer dictionary type.
+			///
+			////////////////////////////////////////////////////////////
+			typedef map<RenderablePriority::EntryPtr, ComponentDictionary, EnumerationBase::EntryComparer>	LayerDictionary;
+
+			/// Constructors, destructors
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief The constructor (default constructor).
+			///
+			////////////////////////////////////////////////////////////
+			RenderManager();
+
+			////////////////////////////////////////////////////////////
+			/// \brief The destructor.
+			///
+			////////////////////////////////////////////////////////////
+			~RenderManager();
+
+			/// Properties
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			virtual RuntimeType GetRuntimeType() const override;
+
+			////////////////////////////////////////////////////////////
+			/// \brief Gets the static runtime type.
+			///
+			/// \return The static runtime type.
+			///
+			////////////////////////////////////////////////////////////
+			static RuntimeType RuntimeType();
+
+			/// Methods
+		public:
+			////////////////////////////////////////////////////////////
+			/// \brief Registers a component.
+			///
+			/// \param l_objectID Id of the owning game object.
+			/// \param l_component The component to register.
+			///
+			////////////////////////////////////////////////////////////
+			void RegisterComponent(const RuntimeID l_objectID, Renderable* l_component);
+
+			////////////////////////////////////////////////////////////
+			/// \brief Removes all components registered by an object.
+			///
+			/// \param l_objectID Id of the owning game object.
+			///
+			////////////////////////////////////////////////////////////
+			void RemoveComponent(const RuntimeID l_objectID);
+
+			////////////////////////////////////////////////////////////
+			/// \brief Renders all currently used components based on their render priority.
+			///
+			////////////////////////////////////////////////////////////
+			void Render() const;
+			
+			/// Members
+		private:
+			LayerDictionary													m_layers; ///< Contains all layers to render.
+		};
+	}
+}
